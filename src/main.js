@@ -2,12 +2,13 @@
 // import Card from 'react-bootstrap/Card';
 import data from './data.json';
 import CardComp from './card';
-
+import './main.css';
 //data[0]."title"
 function Main(){
     return (
         <>
-        <div style={{display:"flex", flexWrap:"wrap" , justifyContent:"space-between", gap:"20px", marginTop:"3%"}}>
+        <div id="container">
+        {/* <div style={{display:"flex", flexWrap:"wrap" , justifyContent:"space-between", gap:"20px", marginTop:"3%"}}> */}
        {data.map(function(item)       {
         return(
 
@@ -17,6 +18,7 @@ function Main(){
        )
         }
         </div>
+      
         </>
 
       );
