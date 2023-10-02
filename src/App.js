@@ -7,6 +7,7 @@ import Main from './main';
 
 import { BrowserRouter , Routes, Route } from 'react-router-dom';
 import Products from './products';
+import Favorites from './favorites';
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
   <Routes>
   <Route path="/" Component={Main} ></Route>
   <Route path="/products" Component={Products} ></Route>
+  <Route path="/favorites" Component={Favorites}></Route>
   </Routes>
 </BrowserRouter>
     </>

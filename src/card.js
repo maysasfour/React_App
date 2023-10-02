@@ -10,9 +10,27 @@ function CardComp(props){
     // }
     let [show, setShow] = useState(false);
     function handleShow(){
-        console.log("hello")
+       
     setShow(!show);
 
+    }
+    function saveToLocalStorage(){
+        if(JSON.parse(localStorage.getItem("favorites"))){
+            let stringData= localStorage.getItem("favorites")
+            let arr= JSON.parse(stringData)
+            let data =props
+            arr.push(data)
+            let stringedData = JSON.stringify(arr)
+
+            localStorage.setItem("favorites", stringedData)
+        }
+        else {
+            let arr=[]
+            let data = props
+            arr.push(data)
+            let stringedData = JSON.stringify(arr)
+            localStorage.setItem("favorites", stringedData)
+        }
     }
     return(
         <>
